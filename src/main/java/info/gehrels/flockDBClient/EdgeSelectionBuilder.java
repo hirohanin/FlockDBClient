@@ -34,7 +34,7 @@ import static info.gehrels.flockDBClient.ByteHelper.asByteBufferOrNull;
 
 public class EdgeSelectionBuilder {
 	private final Iface backingFlockClient;
-	private List<EdgeQuery> queries = new ArrayList<>();
+	private List<EdgeQuery> queries = new ArrayList<EdgeQuery>();
 
 	EdgeSelectionBuilder(Iface backingFlockClient) {
 		this.backingFlockClient = backingFlockClient;
@@ -61,7 +61,7 @@ public class EdgeSelectionBuilder {
 	}
 
 	public List<PagedEdgeList> execute() throws IOException, FlockException {
-		List<PagedEdgeList> result = new ArrayList<>();
+		List<PagedEdgeList> result = new ArrayList<PagedEdgeList>();
 
 		List<EdgeResults> rawResults;
 		try {

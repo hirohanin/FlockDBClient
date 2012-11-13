@@ -50,7 +50,7 @@ public class SelectBuilderTest {
 
 	@Before
 	public void createResultStub() {
-		resultStub = new ArrayList<>();
+		resultStub = new ArrayList<Results>();
 		resultStub.add(new Results(ByteHelper.asByteBufferOrNull(123, 5), 0, -1));
 		resultStub.add(new Results(ByteHelper.asByteBufferOrNull(4, 12), 0, -1));
 	}

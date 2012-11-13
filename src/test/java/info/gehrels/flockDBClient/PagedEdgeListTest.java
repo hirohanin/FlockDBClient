@@ -88,7 +88,7 @@ public class PagedEdgeListTest {
 	public void returnsCorrectIteratorForNonEmptyResults() {
 		Edge edge1 = new Edge(1, 2, 3, 4, 5, 6);
 		Edge edge2 = new Edge(6, 5, 4, 3, 2, 1);
-		EdgeResults results = new EdgeResults(new ArrayList<>(asList(edge1, edge2)), 0, -1);
+		EdgeResults results = new EdgeResults(new ArrayList<Edge>(asList(edge1, edge2)), 0, -1);
 		PagedEdgeList list = new PagedEdgeList(backingFlockClient, edgeQuery, results);
 
 		assertThat(list, contains(sameInstance(edge1), sameInstance(edge2)));

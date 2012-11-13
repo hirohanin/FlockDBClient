@@ -35,7 +35,7 @@ import static info.gehrels.flockDBClient.ByteHelper.asByteBufferOrNull;
 public class ExecutionBuilder {
 	private final Iface backingFlockClient;
 	private final Priority priority;
-	private final List<ExecuteOperation> operations = new ArrayList<>();
+	private final List<ExecuteOperation> operations = new ArrayList<ExecuteOperation>();
 
 	ExecutionBuilder(Iface backingFlockClient, Priority priority) {
 		this.backingFlockClient = backingFlockClient;

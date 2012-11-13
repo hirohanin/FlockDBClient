@@ -36,7 +36,7 @@ public class SelectBuilder {
 
 	SelectBuilder(Iface backingFlockClient, SelectQuery... queries) {
 		this.backingFlockClient = backingFlockClient;
-		this.queries = new ArrayList<>(asList(queries));
+		this.queries = new ArrayList<SelectQuery>(asList(queries));
 	}
 
 	public SelectBuilder select(SelectionQuery firstQuery) {
@@ -50,7 +50,7 @@ public class SelectBuilder {
 	}
 
 	public List<PagedNodeIdList> execute() throws IOException, FlockException {
-		List<PagedNodeIdList> result = new ArrayList<>();
+		List<PagedNodeIdList> result = new ArrayList<PagedNodeIdList>();
 		List<Results> rawResults;
 		try {
 			rawResults = backingFlockClient.select2(this.queries);

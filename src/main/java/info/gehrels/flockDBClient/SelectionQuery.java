@@ -34,7 +34,7 @@ public class SelectionQuery {
 		this.selectOperations = selectOperations;
 	}
 
-	List<SelectOperation> getSelectOperations() {
+	public List<SelectOperation> getSelectOperations() {
 		return selectOperations;
 	}
 
@@ -63,7 +63,7 @@ public class SelectionQuery {
 	private static SelectionQuery selectionSetOperation(SelectionQuery selectOperation1,
 	                                                    SelectionQuery selectOperation2,
 	                                                    SelectOperationType operationType) {
-		ArrayList<SelectOperation> result = new ArrayList<>(selectOperation1.selectOperations);
+		ArrayList<SelectOperation> result = new ArrayList<SelectOperation>(selectOperation1.selectOperations);
 		result.addAll(selectOperation2.selectOperations);
 		result.add(new SelectOperation(operationType));
 		return new SelectionQuery(result);

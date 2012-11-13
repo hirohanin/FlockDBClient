@@ -31,7 +31,7 @@ import static java.nio.ByteOrder.LITTLE_ENDIAN;
 
 final class CountBuilder {
     private final Iface backingFlockClient;
-	private List<List<SelectOperation>> queries = new ArrayList<>();
+	private List<List<SelectOperation>> queries = new ArrayList<List<SelectOperation>>();
 
 	CountBuilder(Iface backingFlockClient) {
         this.backingFlockClient = backingFlockClient;
@@ -59,7 +59,7 @@ final class CountBuilder {
     }
 
 	private List<Integer> createIntegerListFromByteBuffer(ByteBuffer byteBuffer) throws FlockException, TException {
-		List<Integer> result = new ArrayList<>();
+		List<Integer> result = new ArrayList<Integer>();
 		byteBuffer.order(LITTLE_ENDIAN);
 		while (byteBuffer.hasRemaining()) {
 			result.add(byteBuffer.getInt());

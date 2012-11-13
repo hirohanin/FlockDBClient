@@ -57,7 +57,7 @@ public class EdgeSelectionBuilderTest {
 
 	@Before
 	public void createStubResults() {
-		stubResults = new ArrayList<>();
+		stubResults = new ArrayList<EdgeResults>();
 		stubEdge = mock(Edge.class);
 		stubResults.add(new EdgeResults(asList(stubEdge), 0, -1));
 	}
